@@ -13,8 +13,6 @@ from PIL import Image
 
 import os
 
-from tqdm import tqdm
-from datetime import datetime
 
 import warnings
 warnings.filterwarnings('ignore') #경고 무시용
