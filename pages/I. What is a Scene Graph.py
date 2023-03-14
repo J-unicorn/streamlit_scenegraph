@@ -15,9 +15,10 @@ import os, glob
 
 import warnings
 warnings.filterwarnings('ignore') #경고 무시용
-
-import sys
+from streamlit_option_menu import option_menu
+oscommand = os.system('apt-get install libgl1-mesa-glx')
 sys.path.append('/app/streamlit_scenegraph/pages/')
+
 from utils.vis import graph_visual
 
 st.set_page_config(layout="wide")
@@ -29,12 +30,6 @@ st.markdown("""
     color: Black;
     font-size:150% !important;
 }
-.block-container {
-                    padding-top: 1rem;
-                    padding-bottom: 0rem;
-                    padding-left: 5rem;
-                    padding-right: 5rem;
-                }
 """, unsafe_allow_html=True)
 
 with open(file='/home/agens/conda_user/scene/aivg/streamlit/data/tbl_scene.pkl', mode='rb') as f:
