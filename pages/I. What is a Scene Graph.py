@@ -17,7 +17,7 @@ import warnings
 warnings.filterwarnings('ignore') #경고 무시용
 
 import sys
-sys.path.append('/home/agens/conda_user/scene/aivg/streamlit/pages')
+sys.path.append('/app/streamlit_scenegraph/pages/')
 from utils.scene_graph import *
 
 st.set_page_config(layout="wide")
