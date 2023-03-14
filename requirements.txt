@@ -20,12 +20,4 @@ streamlit-chat==0.0.2.1
 streamlit-cytoscapejs==0.0.2
 streamlit-option-menu==0.3.2
 streamlit-pandas==0.0.9
-torch==1.10.0
-torch-cluster==1.6.0+pt113cu116
-torch-geometric==2.2.0
-torch-scatter==2.1.0+pt113cu116
-torch-sparse==0.6.15+pt113cu116
-torch-spline-conv==1.2.1+pt113cu116
-torchaudio==0.10.0
-torchmetrics==0.11.0
-torchvision==0.11.0
+
