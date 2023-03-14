@@ -9,8 +9,6 @@ import numpy as np
 import networkx as nx
 import json
 import pickle as pkl
-
-import psycopg2 as pg2
 import time
 import sys
 import os, glob
