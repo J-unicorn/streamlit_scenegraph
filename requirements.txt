@@ -1,8 +1,4 @@
-agraph-python==101.0.11
-colorama @ file:///home/conda/feedstock_root/build_artifacts/colorama_1666700638685/work
-colorcet @ file:///home/conda/feedstock_root/build_artifacts/colorcet_1664843244467/work
 colourmap==1.1.10
-imagecodecs-lite @ file:///home/conda/feedstock_root/build_artifacts/imagecodecs-lite_1667050048513/work
 imageio==2.4.1
 imageio-ffmpeg==0.4.8
 imbalanced-learn==0.10.0
@@ -11,12 +7,11 @@ mmcv-full==1.4.3
 mmdet==2.20.0
 networkx==2.8.8
 ninja==1.11.1
-numba @ file:///home/conda/feedstock_root/build_artifacts/numba_1669103969463/work
-numpy @ file:///croot/numpy_and_numpy_base_1668593735768/work
+numba 
+numpy
 opencv-contrib-python==4.7.0.68
 opencv-python==4.7.0.68
 opencv-python-headless==4.5.5.64
-openpsg @ git+https://github.com/Jingkang50/OpenPSG.git@bf6201fc2d71ecbeafa12d7658778b2872858ecf
 optional-django==0.1.0
 pandas==1.5.2
 streamlit==1.18.1
