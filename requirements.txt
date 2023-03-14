@@ -18,4 +18,5 @@ streamlit-chat==0.0.2.1
 streamlit-cytoscapejs==0.0.2
 streamlit-option-menu==0.3.2
 streamlit-pandas==0.0.9
+torch
 
