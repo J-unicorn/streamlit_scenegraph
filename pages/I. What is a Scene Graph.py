@@ -32,7 +32,7 @@ st.markdown("""
 }
 """, unsafe_allow_html=True)
 
-with open(file='/home/agens/conda_user/scene/aivg/streamlit/data/tbl_scene.pkl', mode='rb') as f:
+with open(file='/app/streamlit_scenegraph/data/tbl_scene.pkl', mode='rb') as f:
     tbl_scene=pkl.load(f)
 
 def get_spo(Subject, Predicate, Object):
