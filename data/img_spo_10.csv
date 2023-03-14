@@ -1,0 +1,379 @@
+image_id,subject,predicate,object
+2319903,band,holding,cup
+2319903,band,on,fingers
+2319903,band,on hand of,mans
+2319903,basket,on,counter
+2319903,beads,on,neck
+2319903,beans,topped on,hot dogs
+2319903,beard,on,man
+2319903,bun,with,hot dog
+2319903,buns,around,hot dog
+2319903,buns,on,hot dog
+2319903,chair,beside,man
+2319903,chips,on,wall
+2319903,counter,behind,man
+2319903,counter,under,plant
+2319903,cup,in,band
+2319903,cup,in hand of,man
+2319903,cup,with,straw
+2319903,door,behind,counter
+2319903,ear,of,man
+2319903,eyeglasses,on,head
+2319903,eyeglasses,on,man
+2319903,fingers,on hand of,mans
+2319903,fingers,with,band
+2319903,hair,on,man
+2319903,hot dog,in,bun
+2319903,hot dog,in,buns
+2319903,hot dog,in,wrapper
+2319903,hot dog,on,buns
+2319903,hot dog,with,bun
+2319903,hot dog,with,ketchup
+2319903,hot dog,with,sauce
+2319903,hot dog,with,something
+2319903,hot dog,with,toppings
+2319903,hotdog,on,wall
+2319903,jacket,on,man
+2319903,ketchup,on,hotdog
+2319903,ketchup,on,paper
+2319903,ketchup,on,tray
+2319903,ketchup,on,wrapper
+2319903,ketchup,with,hot dog
+2319903,man,drinking from,cup
+2319903,man,has,hair
+2319903,man,has a,beard
+2319903,man,holding,cup
+2319903,man,sucking on,straw
+2319903,man,wearing,glasses
+2319903,man,wearing,jacket
+2319903,man,wearing,shirt
+2319903,man,with,eyeglasses
+2319903,man,with,jacket
+2319903,man,with,straw
+2319903,neck,with,beads
+2319903,neck,with,scarf
+2319903,paper,hanging above,plant
+2319903,paper,with,ketchup
+2319903,photo,behind,man
+2319903,photo,on,wall
+2319903,plant,in,basket
+2319903,plant,on,counter
+2319903,plant,on,shelf
+2319903,sauce,on,hot dog
+2319903,scarf,on,neck
+2319903,shelf,under,plant
+2319903,shirt,on,man
+2319903,snacks,hanging from,rack
+2319903,something,on,hot dog
+2319903,straw,from,drink
+2319903,straw,in,mans mouth
+2319903,straw,in mouth of,man
+2319903,wall,with,chips
+2319903,zipper,of,jacket
+2320618,band,on,arm
+2320618,bracelet,on,wrist
+2320618,foot,underneath,sand
+2320618,logo,on,frisbee
+2320618,man,in,hat
+2320618,man,kicking,sand
+2320618,man,kicking up,sand
+2320618,man,playing,frisbee
+2320618,man,reaching,frisbee
+2320618,man,standing,hands
+2320618,man,watching,frisbee
+2320618,man,wearing,clothes
+2320618,man,wearing,hat
+2320618,man,wearing,shirt
+2320618,man,wearing,shorts
+2320618,man,wearing,timepiece
+2320618,man,wearing,visor
+2320618,man,with,hands
+2320618,man,with,visor
+2320618,men,are watching,frisbee
+2320618,person,carrying,frisbee
+2320618,person,holding,frisbee
+2320618,sand,covered,area
+2320618,shirt,with,design
+2320618,shorts,with a,pattern
+2320618,visor,worn by a,man
+2320618,words,on,arm
+2335472,arm band,on a,man
+2335472,helmet,on,mans head
+2335472,helmet,on mans,head
+2335472,man,holding,bat
+2335472,man,holds,bat
+2335472,man,wearing,arm band
+2335472,man,wearing,face mask
+2335472,man,wearing,helmet
+2335472,man,wearing,jersey
+2335472,man,wearing,knee brace
+2335472,man,wearing,mitt
+2335472,man,wearing,pants
+2335472,man,wearing,shirt
+2335472,man,wearing,uniform
+2335472,man,wearing,wrist band
+2335472,man,wearing,wristband
+2335472,mitt,in,hand
+2335472,number,on,jersey
+2343076,cap,on,man
+2343076,controller,in,hand
+2343076,game controller,in,hand
+2343076,glasses,on,man
+2343076,gray shirt,on,man
+2343076,hair,on,man
+2343076,jean shorts,on,man
+2343076,man,holding,controller
+2343076,man,holding,game controller
+2343076,man,on,chair
+2343076,man,on,gray shirt
+2343076,man,pointing h,finger
+2343076,man,sitting in,chair
+2343076,man,sitting on,chair
+2343076,man,sitting on,couch
+2343076,man,wearing,cap
+2343076,man,wearing,glasses
+2343076,man,wearing,gray shirt
+2343076,man,wearing,hat
+2343076,man,wearing,jean shorts
+2343076,man,wearing,shirt
+2343076,man,wearing,shorts
+2343076,man,wearing,wii
+2343076,picture,hanging on,wall
+2343076,picture,on,wall
+2343076,shorts,on,man
+2343076,table,near,bookshelf
+2355755,background,has,bikes
+2355755,bench,has,sunglasses
+2355755,bench,under,man
+2355755,bikes,behind,bench
+2355755,bikes,in,background
+2355755,bikes,on,rack
+2355755,bikes,on,street
+2355755,bookbag,by,person
+2355755,bookbag,near,man
+2355755,bookbag,on,ground
+2355755,bookbag,on,street
+2355755,bookbag,upon,ground
+2355755,building,has,window
+2355755,cap,on,man
+2355755,chain,above,sign
+2355755,chain,on,door
+2355755,chain,over,sign
+2355755,cracks,on,ground
+2355755,door,has,chain
+2355755,door,has,sign
+2355755,doors,of,store
+2355755,face,has,sunglasses
+2355755,ground,has,cracks
+2355755,hair,on,head
+2355755,hair,on,person
+2355755,hat,on,head
+2355755,hat,on,man
+2355755,head,has,hat
+2355755,head,of,man
+2355755,head,with,hat
+2355755,jacket,on,man
+2355755,lamps,of,lights
+2355755,lamps,on,pole
+2355755,lamps,over,street
+2355755,man,has,head
+2355755,man,has,jacket
+2355755,man,on,bench
+2355755,man,under,tree
+2355755,man,upon,bench
+2355755,man,wearing,hat
+2355755,man,wearing,jacket
+2355755,man,wearing,pants
+2355755,man,wearing,shoes
+2355755,man,wearing,sunglasses
+2355755,man,with,hat
+2355755,man,with,legs
+2355755,name,on,store
+2355755,pants,on,man
+2355755,person,by,bookbag
+2355755,person,sitting,bench
+2355755,person,under,tree
+2355755,pole,has,lamps
+2355755,rack,has,bikes
+2355755,rack,with,bike
+2355755,shades,on,man
+2355755,shirt,on,bench
+2355755,shoes,on,man
+2355755,sign,on,door
+2355755,sign,under,chain
+2355755,spout,on,store
+2355755,store,has,doors
+2355755,store,has,name
+2355755,store,has,spout
+2355755,street,has,bookbag
+2355755,sunglasses,on,face
+2355755,sunglasses,on,head
+2355755,sunglasses,on,man
+2355755,white,door,signs
+2355755,white,lettered,building
+2355755,window,on,building
+2355755,words,on,glass
+2366051,man,has,beard
+2366051,man,has,hand
+2366051,man,has,head
+2366051,man,holding,ballpoint
+2366051,man,holding,notepad
+2366051,man,holding,recorder
+2366051,man,in,pants
+2366051,man,in,shirt
+2366051,man,interviewing,man
+2366051,man,wearing,belt
+2366051,man,wearing,coat
+2366051,man,wearing,pants
+2366051,man,wearing,pin
+2366051,man,wearing,press badge
+2366051,man,wearing,shirt
+2366051,man,wearing,suit
+2366051,man,wearing,tie
+2366051,pin,on side of,coat
+2366051,press badge,has,photo
+2367614,cage,for,safety
+2367614,cage,on,back
+2367614,cap,has,color
+2367614,deck,has,fence
+2367614,fence,has,grid
+2367614,giraffe,eating,food
+2367614,giraffe,has,head
+2367614,giraffe,has,legs
+2367614,giraffe,has,neck
+2367614,giraffe,has,ossicone
+2367614,giraffe,has,spots
+2367614,giraffe,has,tail
+2367614,giraffe,has,top
+2367614,giraffe,over,back
+2367614,grid,made of,fence
+2367614,hand,are holding,food
+2367614,hand,has,food
+2367614,hand,holding,leaf
+2367614,head,has,horns
+2367614,horns,are on,head
+2367614,leaf,for,giraffe
+2367614,leaf,hanging,down
+2367614,man,has,cap
+2367614,man,has,hand
+2367614,man,has,sunglasses
+2367614,man,holding,leaf
+2367614,man,wearing,cap
+2367614,man,wearing,hat
+2367614,man,wearing,shirt
+2367614,mirror,has,view
+2367614,mirror,on,side
+2367614,ossicones,are on,top
+2367614,palm,has,leaf
+2367614,people,are observing,giraffe
+2367614,people,are on,deck
+2367614,people,dressed in,shirt
+2367614,people,have,hand
+2367614,people,wearing,cap
+2367614,people,wearing,shirt
+2367614,person,has,hand
+2367614,person,wearing,shirt
+2367614,platform,on,back
+2367614,railing,surrounds,wagon
+2367614,shirt,has,sleeves
+2367614,spots,are on,giraffe
+2367614,tree,behind,car
+2367614,tree,has,bark
+2367614,tree,has,leaves
+2367614,tree,has,trunk
+2367614,tree,next to,truck
+2367614,truck,has,back
+2367614,truck,has,side
+2367614,truck,has,wagon
+2367614,wagon,has,railing
+2367614,woman,dressed in,capris
+2367614,woman,has,outfit
+2367614,woman,wearing,dress
+2368398,bottle,behind,faucet
+2368398,bottle,near,sink
+2368398,chocolate,being poured on,donuts
+2368398,chocolate,being put on,donuts
+2368398,chocolate,inside,pot
+2368398,chocolate,on top of,spoon
+2368398,chocolate,poured on,donuts
+2368398,container,on,table
+2368398,donut,besides,donut
+2368398,donuts,in,container
+2368398,donuts,on top of,table
+2368398,donuts,topped with,chocolate
+2368398,donuts,with,chocolate
+2368398,donuts,with,powder
+2368398,donuts,with,powdered sugar
+2368398,faucet,on,sink
+2368398,faucet,on top of,sink
+2368398,lid,covered in,sauce
+2368398,lid,in womans,hand
+2368398,lid,to,pot
+2368398,lid,with,handle
+2368398,menu,has,lettering
+2368398,menu,has,menu
+2368398,menu,next to,menu
+2368398,menu,on,wall
+2368398,menu,with,pricing
+2368398,nail polish,on womans,fingers
+2368398,plastic bottle,has a,label
+2368398,plastic bottle,holds,powdered sugar
+2368398,plastic bottle,of,powdered sugar
+2368398,plastic bottle,on top of,table
+2368398,plastic bottle,with,plastic top
+2368398,pot,filled with,chocolate
+2368398,pot,on top of,table
+2368398,pot,used to melt,chocolate
+2368398,powdered sugar,has,plastic top
+2368398,powdered sugar,next to,donuts
+2368398,powdered sugar,on top of,table
+2368398,sink,inside,counter
+2368398,sponge,next to,dish
+2368398,spoon,in womans,hand
+2368398,spoon,spreading,chocolate
+2368398,spoon,used for,chocolate
+2368398,vest,has a,zipper
+2368398,woman,cooking,dessert
+2368398,woman,has blonde,hair
+2368398,woman,holding,lid
+2368398,woman,holding,spoon
+2368398,woman,making,donuts
+2368398,woman,pouring,chocolate
+2368398,woman,putting on,chocolate
+2368398,woman,wearing,nail polish
+2368398,woman,wearing,shirt
+2368398,woman,wearing,vest
+2368398,woman,wearing striped,shirt
+2368398,zipper,on,vest
+2374468,ground,full of,snow
+2374468,helmet,hanging from,skis
+2374468,man,carrying,bag
+2374468,man,carrying,helmet
+2374468,man,carrying,ski pole
+2374468,man,carrying,skis
+2374468,man,has,pants
+2374468,man,has,shoes
+2374468,man,holding,ski board
+2374468,man,holding,ski pole
+2374468,man,holding,skis
+2374468,man,holds,ski pole
+2374468,man,in,snow
+2374468,man,on,snow
+2374468,man,wearing,boots
+2374468,man,wearing,gloves
+2374468,man,wearing,pants
+2374468,man,wearing,sneakers
+2374468,man,wearing,sunglasses
+2374468,man,wearing,sweater
+2374468,man,with,hair
+2374468,picture,by,snow bird
+2374468,ski company,has,logo
+2374468,skier,looking over,shoulder
+2374468,skier,wearing,pants
+2374468,ski pole,in,snow
+2374468,sky,over,hill
+2374468,snow,on,hillside
+2374468,snow,on side of,hill
+2374468,tree,at top of,hill
+2374468,tree,growing on,hill
+2374468,tree,visible over,mountain

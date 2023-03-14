@@ -1,0 +1,22 @@
+,source,Relation,target,Val
+0,person,holding,cup,0.970655620098114
+1,ceiling-merged,over,person,0.9329856038093567
+2,person,in,refrigerator,0.8769472241401672
+3,person,holding,toothbrush,0.8596487641334534
+4,banana,on,counter,0.8387625217437744
+5,bottle,on,counter,0.7702541351318359
+6,ceiling-merged,over,refrigerator,0.7514612674713135
+7,ceiling-merged,over,cabinet-merged,0.7507185339927673
+8,counter,on,cabinet-merged,0.7402018308639526
+9,paper-merged,on,counter,0.6993030309677124
+10,bottle,on,refrigerator,0.6771389245986938
+11,banana,beside,banana,0.6178067326545715
+12,refrigerator,attached to,wall-wood,0.6055598855018616
+13,ceiling-merged,over,banana,0.5690398216247559
+14,ceiling-merged,attached to,wall-wood,0.5397699475288391
+15,refrigerator,beside,person,0.5212487578392029
+16,window-other,over,banana,0.5124081969261169
+17,banana,beside,person,0.4889785051345825
+18,banana,beside,paper-merged,0.48615744709968567
+19,person,in front of,cabinet-merged,0.4823862910270691
+20,person,beside,cabinet-merged,0.4692596197128296
