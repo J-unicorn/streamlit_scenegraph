@@ -17,7 +17,7 @@ import os
 import warnings
 warnings.filterwarnings('ignore') #경고 무시용
 
-from utils.scene_graph import *
+from utils.scene_graph import graph_visual
 
 st.set_page_config(layout="wide")
 
