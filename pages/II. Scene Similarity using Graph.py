@@ -11,8 +11,10 @@ import time
 
 from PIL import Image
 
-import os
-
+import sys,os
+from streamlit_option_menu import option_menu
+sys.path.append('/app/streamlit_scenegraph/pages/')
+oscommand = os.system('apt-get install libgl1-mesa-glx')
 
 import warnings
 warnings.filterwarnings('ignore') #경고 무시용
@@ -208,9 +210,9 @@ def Practice():
 
     
     
-    with open(file='/home/agens/conda_user/scene/aivg/streamlit/data/sim_dict.pkl', mode='rb') as f:
+    with open(file='/app/streamlit_scenegraph/data/sim_dict.pkl', mode='rb') as f:
         sim_dict=pkl.load(f)
-    with open(file='/home/agens/conda_user/scene/aivg/streamlit/data/spo_dict.pkl', mode='rb') as f:
+    with open(file='/app/streamlit_scenegraph/data/spo_dict.pkl', mode='rb') as f:
         df_dict=pkl.load(f)
 
       
