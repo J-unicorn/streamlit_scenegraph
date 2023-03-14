@@ -9,7 +9,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import json
-import networkx as nx
 from streamlit_option_menu import option_menu
 from utils.scene_graph import *
 
@@ -24,7 +23,7 @@ st.markdown("""
 .center {
     text-align: center; 
     color: Black;
-    font-size:250% !important;
+    font-size:150% !important;
 }
 </style>
 """, unsafe_allow_html=True)
