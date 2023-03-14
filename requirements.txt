@@ -8,9 +8,7 @@ mmdet==2.20.0
 networkx==2.8.8
 ninja==1.11.1
 numba 
-numpy
-opencv-contrib-python==4.7.0.68
-opencv-python==4.7.0.68
+numpys
 opencv-python-headless==4.5.5.64
 optional-django==0.1.0
 pandas==1.5.2
