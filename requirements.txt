@@ -1,3 +1,4 @@
+libgl1-mesa-glx
 colourmap==1.1.10
 imageio==2.4.1
 imageio-ffmpeg==0.4.8
