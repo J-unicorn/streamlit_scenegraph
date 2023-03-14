@@ -18,7 +18,7 @@ warnings.filterwarnings('ignore') #경고 무시용
 
 import sys
 sys.path.append('/app/streamlit_scenegraph/pages/')
-from utils.scene_graph import *
+from utils.scene_graph import graph_visual
 
 st.set_page_config(layout="wide")
 
