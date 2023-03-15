@@ -75,7 +75,7 @@ def Explanation():
 
     st.markdown("""## <h1 style='text-align: left; color: #3b3b3b; font-size:180%'>☑ 장면의 SPO를 통한 유사도 산출방법</h1>""", 
     unsafe_allow_html=True)
-    img_1 = '/home/agens/conda_user/scene/aivg/streamlit_img/part2_img_1_1.PNG'
+    img_1 = '/app/streamlit_scenegraph/image/part2_img_1_1.PNG'
     img1 = Image.open(img_1)
     st.write("""
 이미지나 영상의 장면에서 객체 및 객체의 상태나 행위를 관계로 추출할 수 있습니다.\n
@@ -88,7 +88,7 @@ def Explanation():
         title1 = "SPO 빈도 기반 장면 간 유사도 산출"
         st.markdown(f"#### <h1 style='text-align: left; color: #022ea9; font-size:150%'>{title1}</h1>",
         unsafe_allow_html=True)
-        img_1 = '/home/agens/conda_user/scene/aivg/streamlit_img/part2_img_1_1.PNG'
+        img_1 = '/app/streamlit_scenegraph/image/part2_img_1_1.PNG'
         img1 = Image.open(img_1)
         img1.resize((600, 400))
         
@@ -97,7 +97,7 @@ def Explanation():
         title1 = "동형 그래프 구조적 특성에 따른 유사도 산출"
         st.markdown(f"#### <h1 style='text-align: left; color: #022ea9; font-size:140%'>{title1}</h1>",
         unsafe_allow_html=True)
-        img_2 = '/home/agens/conda_user/scene/aivg/streamlit_img/part2_img_1_2.PNG'
+        img_2 = '/app/streamlit_scenegraph/image/part2_img_1_2.PNG'
         img2 = Image.open(img_2)
         img2.resize((600, 400))
         st.write("\n")
@@ -155,7 +155,7 @@ MCS는 Jaccard 유사도와 비슷하지만, Jaccard 유사도 달리 **최대�
     title2 = "Maximum Common Subgraph(MCS)를 이용한 Scene Graph 구조적 유사도 산출"
     st.markdown(f"#### <h1 style='text-align: left; color: #022ea9; font-size:150%'>{title2}</h1>",
     unsafe_allow_html=True)
-    img_1 = '/home/agens/conda_user/scene/aivg/streamlit_img/part2_img2.PNG'
+    img_1 = '/app/streamlit_scenegraph/image/part2_img2.PNG'
     img1 = Image.open(img_1)
     img1.resize((1000, 700))
         
@@ -191,18 +191,7 @@ MCS는 Jaccard 유사도와 비슷하지만, Jaccard 유사도 달리 **최대�
 
 def Practice():
 
-    img_saved_path = '/home/agens/conda_user/scene/aivg/data/action_genone/IMG_Action_Genome/VG_100K'
-    img_list = sorted([int(x.split('.')[0]) for x in list(os.listdir(img_saved_path))], reverse = False)
-    img_list.append("<select>") #디폴트값 지정1
-    default_ix = img_list.index(2336398)#디폴트값 지정
-    
-    #cur.execute("""SET GRAPH_PATH = SCENE_GRAPH_V1""")
-
-    # 1) 이미지 번호로 이미지 추출 
-    # 2) 이미지 번호로 SPO(텍스트) 테이블(DataFrame) 추출
-    # 3) 이미지 번호로 SPO(텍스트) Scene Graph 추출
-
-    ttl_txt1_1 = """☑ <strong style="font-size : 110%;">유사 이미지</strong> 및 Scene Graph 추출"""
+      ttl_txt1_1 = """☑ <strong style="font-size : 110%;">유사 이미지</strong> 및 Scene Graph 추출"""
     st.markdown(f"""## <h3 style='text-align: center; color: #3b3b3b; font-size:100%, font-weight = normal'>{ttl_txt1_1}</h3>""", 
                 unsafe_allow_html=True)
     st.text("")
@@ -216,7 +205,7 @@ def Practice():
         df_dict=pkl.load(f)
 
       
-    imageCarouselComponent = components.declare_component("image-carousel-component", path="/home/agens/conda_user/scene/aivg/streamlit/Streamlit-Image-Carousel/frontend/public")
+    imageCarouselComponent = components.declare_component("image-carousel-component", path="/app/streamlit_scenegraph/Streamlit-Image-Carousel/frontend/public")
     
     imageUrls = [ 
         "https://i.ibb.co/8syMZ35/61539.jpg",
@@ -263,7 +252,7 @@ def Practice():
             unsafe_allow_html=True)
             img_idx = int(selectedImageUrl.split('/')[-1][:-4])
             img_num_lst = sim_dict[img_idx]
-            img_path = """/home/agens/conda_user/scene/aivg/data/action_genone/IMG_Action_Genome/VG_100K/"""
+            img_path = """https://cs.stanford.edu/people/rak248/VG_100K/"""
             filteredImages = [img_path + f"{img_num}.jpg" for img_num in list(img_num_lst)]
             
             st.text(f"""• 이미지 번호 {img_idx} 선택""")

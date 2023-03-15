@@ -103,7 +103,7 @@ def Explanation():
     st.markdown("___")
 #----------------------------------------------------------------------------------------------------------------
     st.markdown("""## <h1 style='text-align: left; color: #3b3b3b; font-size:180%'>☑ GDB를 이용한 Scene Graph 모델링</h1>""", unsafe_allow_html=True)
-    img_2 = '/home/agens/conda_user/scene/aivg/streamlit_img/part1_img2.PNG'
+    img_2 = '/app/streamlit_scenegraph/image/part1_img2.PNG'
     img2 = load_image(img_2)
     text2 = """
             Scene Graph의 모델링 방법론은 ⑴술어(predicate)를 하나의 노드로 따로 표현하는 방식과 ⑵술어를 엣지로써 표현하는 두 가지 방식이 있습니다.\n
@@ -141,7 +141,7 @@ def Practice1():
     st.text("")
     st.write("원하시는 이미지를 클릭하면, 아래 Scene Graph가 출력됩니다.")
     
-    imageCarouselComponent = components.declare_component("image-carousel-component", path="/home/agens/conda_user/scene/aivg/streamlit/Streamlit-Image-Carousel/frontend/public")
+    imageCarouselComponent = components.declare_component("image-carousel-component", path="/app/streamlit_scenegraph/Streamlit-Image-Carousel/frontend/public")
     
     imageUrls = [ 
         "https://i.ibb.co/y0dHF08/new-2320618.jpg",
@@ -154,7 +154,7 @@ def Practice1():
         "https://i.ibb.co/q5wkJGg/2367614.jpg",
         "https://i.ibb.co/jRLww69/2368398.jpg"
         ]
-    df=pd.read_csv('/home/agens/conda_user/scene/aivg/streamlit/data/img_spo_10.csv')
+    df=pd.read_csv('/app/streamlit_scenegraph/data/img_spo_10.csv')
     groups=df.groupby('image_id')
     df_dict = dict(list(groups))
     selectedImageUrl = imageCarouselComponent(imageUrls=imageUrls, height=200)
@@ -270,7 +270,7 @@ def Practice2():
 
             # Get list of images in folder
             img_num_lst =  list(img_dic.keys())
-            img_path = """/home/agens/conda_user/scene/aivg/data/action_genone/IMG_Action_Genome/VG_100K/"""
+            img_path = """https://cs.stanford.edu/people/rak248/VG_100K/"""
             filteredImages = [img_path + f"{img_num}.jpg" for img_num in img_num_lst]
             
             #filteredImages = [image_resize(image) for image in filteredImages]
