@@ -130,9 +130,9 @@ def Practice():
     pred_button = None
     df = None
     
-    def image_extraction(image_file):
+    def image_extraction(image_arr):
         resp = requests.post("http://112.221.131.146:1650/predict", 
-                         files={"file": open(image_file,'rb')})
+                         files={"file": open(image_arr,'rb')})
         js=resp.json()
         return pd.read_json(js)
     
@@ -153,7 +153,9 @@ def Practice():
         if image_file:
             st.markdown("#### SceneGraph 생성을 해보세요.")
             pred_button = st.button("Scene Graph Detection")
-            df = image_extraction(image_file)
+            org_image = Image.open(image_file, mode='r').convert('RGB')
+            img_array = np.array(org_image)
+            df = image_extraction(img_array)
             if pred_button:
                 st.session_state.predbtn_state = True
     
