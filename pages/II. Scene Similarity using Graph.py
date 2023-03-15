@@ -5,7 +5,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import json
-import streamlit.components.v1 as components
 import pickle as pkl
 import time
 
@@ -13,8 +12,8 @@ from PIL import Image
 
 import sys,os
 from streamlit_option_menu import option_menu
+from st_click_detector import click_detector
 sys.path.append('/app/streamlit_scenegraph/pages/')
-oscommand = os.system('apt-get install libgl1-mesa-glx')
 
 import warnings
 warnings.filterwarnings('ignore') #경고 무시용
@@ -22,8 +21,6 @@ warnings.filterwarnings('ignore') #경고 무시용
 from utils.vis import graph_visual
 
 st.set_page_config(layout="wide")
-
-
 
 
 def Intro():
@@ -203,28 +200,15 @@ def Practice():
     with open(file='/app/streamlit_scenegraph/data/spo_dict.pkl', mode='rb') as f:
         df_dict=pkl.load(f)
 
-      
-    imageCarouselComponent = components.declare_component("image-carousel-component", path="/app/streamlit_scenegraph/Streamlit-Image-Carousel/frontend/public")
     
-    imageUrls = [ 
-        "https://cs.stanford.edu/people/rak248/VG_100K/61539.jpg",
-        "https://cs.stanford.edu/people/rak248/VG_100K/107992.jpg",
-        "https://cs.stanford.edu/people/rak248/VG_100K/2359568.jpg",
-        "https://cs.stanford.edu/people/rak248/VG_100K/2370806.jpg",
-        "https://cs.stanford.edu/people/rak248/VG_100K/2368620.jpg",
-        "https://cs.stanford.edu/people/rak248/VG_100K/2344853.jpg",
-        "https://cs.stanford.edu/people/rak248/VG_100K/1593031.jpg",
-        "https://cs.stanford.edu/people/rak248/VG_100K/713803.jpg",
-        "https://cs.stanford.edu/people/rak248/VG_100K/2375247.jpg",
-        "https://cs.stanford.edu/people/rak248/VG_100K/2349118.jpg",
-        "https://cs.stanford.edu/people/rak248/VG_100K/2343751.jpg",
-        "https://cs.stanford.edu/people/rak248/VG_100K/285795.jpg",
-        "https://cs.stanford.edu/people/rak248/VG_100K/2348780.jpg",
-        "https://cs.stanford.edu/people/rak248/VG_100K/2353558.jpg",
-        "https://cs.stanford.edu/people/rak248/VG_100K/2373302.jpg",
-        "https://cs.stanford.edu/people/rak248/VG_100K/2325386.jpg"
-        ]
-    selectedImageUrl = imageCarouselComponent(imageUrls=imageUrls, height=150)
+    image_lst = ['61539','2370806','2368620','2344853','2343751','285795','2373302','107992','2353558','2348780','2349118']
+    img_path = """https://cs.stanford.edu/people/rak248/VG_100K/"""
+    imageUrls = [img_path + f"{img_num}.jpg" for img_num in image_lst]
+    
+    cont_lst = [f"""<a href='#' id={i}><img width='15%' src="{imageUrl}"></a>""" for i, imageUrl in enumerate(imageUrls)]
+    content = "".join(cont_lst)
+    clicked = click_detector(content)
+    
     col01,col02,col03 = st.columns(3)
     st.markdown("___")
 
@@ -245,20 +229,21 @@ def Practice():
             
     with col1:
         
-        if selectedImageUrl is not None:
+        if clicked is not None:
+            imageurl=imageUrls[int(clicked)] if clicked else imageUrls[0]
             min_ttl1 = f"Input Image"
             st.markdown(f"""<h6 style='text-align: center; color: #3b3b3b; font-size:30%, font-weight = 600'>{min_ttl1}</h6>""",
             unsafe_allow_html=True)
-            img_idx = int(selectedImageUrl.split('/')[-1][:-4])
+            img_idx = int(imageurl.split('/')[-1][:-4])
             img_num_lst = sim_dict[img_idx]
             img_path = """https://cs.stanford.edu/people/rak248/VG_100K/"""
             filteredImages = [img_path + f"{img_num}.jpg" for img_num in list(img_num_lst)]
             
             st.text(f"""• 이미지 번호 {img_idx} 선택""")
-            st.image(selectedImageUrl)
+            st.image(imageurl)
 
     with col3:
-        if selectedImageUrl is not None:
+        if clicked is not None:
             if 'counter' not in st.session_state:
                 st.session_state.counter = 0
             photo = filteredImages[st.session_state.counter%10]
@@ -268,7 +253,7 @@ def Practice():
             st.markdown(f"""<h5 style='text-align: center; color: #3b3b3b; font-size:250%, font-weight = 600'>{min_ttl2}</h5>""",
             unsafe_allow_html=True)
     with col5:
-        if selectedImageUrl is not None:
+        if clicked is not None:
             min_ttl3 = f"Result 2 : Scene Graph of Similar Image"
             st.markdown(f"""<h5 style='text-align: center; color: #3b3b3b; font-size:500%, font-weight = 600'>{min_ttl3}</h5>""",
                         unsafe_allow_html=True)
