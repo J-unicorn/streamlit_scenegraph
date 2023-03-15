@@ -2,7 +2,7 @@
 
 import sys
 
-sys.path.append('/app/streamlit_scenegraph/')
+sys.path.append('/app/streamlit_scenegraph/pages')
 import subprocess
 subprocess.call(["apt-get","-y","install","libgl1-mesa-glx"])
 
