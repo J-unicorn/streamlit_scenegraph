@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 import subprocess
-subprocess.call(["apt-get","-y","install","libgl1-mesa-glx"])
+subprocess.call(["sudo","apt-get","-y","install","libgl1-mesa-glx"])
 
 
 # 하기 내용은 표시 텍스트
