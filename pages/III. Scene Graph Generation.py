@@ -2,7 +2,7 @@
 
 import sys
 
-sys.path.append('/home/agens/conda_user/scene/aivg/streamlit/pages')
+sys.path.append('/app/streamlit_scenegraph/')
 
 from PIL import Image
 import streamlit as st
@@ -29,7 +29,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 #--File Path--------------------------------------------------------------------------------------------------------------
-img_path = '/home/agens/conda_user/scene/aivg/streamlit_img/'
+img_path = '/app/streamlit_scenegraph/image/'
 img1_path = img_path+'part1_img1.PNG'
 img2_path = img_path+'part3_img1.png'
 img3_path = img_path+'part3_img2.png'
