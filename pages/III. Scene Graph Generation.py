@@ -136,19 +136,6 @@ def Practice():
         js=resp.json()
         return pd.read_json(js)
     
-    def from_image_to_bytes(img):
-        """
-        pillow image 객체를 bytes로 변환
-        """
-        # Pillow 이미지 객체를 Bytes로 변환
-        imgByteArr = io.BytesIO()
-        img.save(imgByteArr, format=img.format)
-        imgByteArr = imgByteArr.getvalue()
-        # Base64로 Bytes를 인코딩
-        encoded = base64.b64encode(imgByteArr)
-        # Base64로 ascii로 디코딩
-        decoded = encoded.decode('ascii')
-        return decoded
 
     col_1, col_2, col_3, col_4 = st.columns([4.8, 0.2, 4.8, 0.2])
     with col_1:
@@ -166,9 +153,9 @@ def Practice():
         if image_file:
             st.markdown("#### SceneGraph 생성을 해보세요.")
             pred_button = st.button("Scene Graph Detection")
-            org_image = Image.open(image_file, mode='r').convert('RGB')
-            img_converted = from_image_to_bytes(org_image)
-            df = image_extraction(img_converted)
+          #  org_image = Image.open(image_file, mode='r').convert('RGB')
+         #   img_converted = from_image_to_bytes(org_image)
+            df = image_extraction(image_file)
             if pred_button:
                 st.session_state.predbtn_state = True
     
