@@ -155,10 +155,8 @@ def Practice():
             st.markdown("#### SceneGraph 생성을 해보세요.")
             pred_button = st.button("Scene Graph Detection")
             org_image = Image.open(image_file, mode='r').convert('RGB')
-            buffer = io.BytesIO()
-            org_image.save(buffer,'png',quality=100)
-            
-            df = image_extraction(org_image)
+            buffer = io.BytesIO(org_image)
+            df = image_extraction(buffer)
             if pred_button:
                 st.session_state.predbtn_state = True
     
