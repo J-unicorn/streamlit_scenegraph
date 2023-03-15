@@ -1,22 +1,19 @@
 # -*- coding: utf8 -*-
 
 import streamlit as st
-import streamlit.components.v1 as components
+from st_click_detector import click_detector
 
 from PIL import Image
 import pandas as pd
 import numpy as np
 import networkx as nx
-import json
 import pickle as pkl
 import time
-import sys
-import os, glob
+import sys,os
 
 import warnings
-warnings.filterwarnings('ignore') #경고 무시용
+warnings.filterwarnings('ignore')
 from streamlit_option_menu import option_menu
-oscommand = os.system('apt-get install libgl1-mesa-glx')
 sys.path.append('/app/streamlit_scenegraph/pages/')
 
 from utils.vis import graph_visual
@@ -40,12 +37,6 @@ def get_spo(Subject, Predicate, Object):
     img_lst=list(tbl_scene.loc[condition]['image_id'].values[:10])
     groups=tbl_scene.loc[tbl_scene['image_id'].isin(img_lst)].groupby('image_id')            
     return  dict(list(groups))
-
-def image_resize(image_file,width=200,height=300):
-    image=Image.open(image_file)
-    new_image = image.resize((width,height))
-    return new_image
-
 
 def load_image(img_path):
     img = Image.open(img_path)
@@ -141,28 +132,23 @@ def Practice1():
     st.text("")
     st.write("원하시는 이미지를 클릭하면, 아래 Scene Graph가 출력됩니다.")
     
-    imageCarouselComponent = components.declare_component("image-carousel-component", path="/app/streamlit_scenegraph/Streamlit-Image-Carousel/frontend/public")
-    
-    imageUrls = [ 
-        "https://i.ibb.co/y0dHF08/new-2320618.jpg",
-        "https://i.ibb.co/s9QjfDz/new-2335472.jpg",
-        "https://i.ibb.co/5swc4Tt/new-2343076.jpg",
-        "https://i.ibb.co/c2SNbyN/new-2366051.jpg",
-        "https://i.ibb.co/QPmHVKm/new-2374468.jpg",
-        "https://i.ibb.co/K0YRXMn/2319903.jpg",
-        "https://i.ibb.co/d6Mj9Dm/2355755.jpg",
-        "https://i.ibb.co/q5wkJGg/2367614.jpg",
-        "https://i.ibb.co/jRLww69/2368398.jpg"
-        ]
-    df=pd.read_csv('/app/streamlit_scenegraph/data/img_spo_10.csv')
+     image_lst = ['2320618','2335472','2343076','61539','2370806','2368620','2344853','2343751','285795','2348780','2349118','2353558']
+    img_path = """https://cs.stanford.edu/people/rak248/VG_100K/"""
+    imageUrls = [img_path + f"{img_num}.jpg" for img_num in image_lst]
+    cont_lst = [f"""<a href='#' id={i}><img width='15%' src="{imageUrl}"></a>""" for i, imageUrl in enumerate(imageUrls)]
+    content = "".join(cont_lst)
+    clicked = click_detector(content)
+
+
+    df=tbl_scene.loc[tbl_scene['image_id'].apply(lambda x : x in image_lst)]
     groups=df.groupby('image_id')
     df_dict = dict(list(groups))
-    selectedImageUrl = imageCarouselComponent(imageUrls=imageUrls, height=200)
 
     st.markdown("___")
 
-    if selectedImageUrl is not None:
-        img_idx = int(selectedImageUrl[selectedImageUrl.index('.jpg')-7:selectedImageUrl.index('.jpg')])
+    if clicked is not None:
+        imageurl=imageUrls[int(clicked)] if clicked else imageUrls[0]
+        img_idx = imageurl.split('/')[-1][:-4]
         st.text(f"• 이미지 번호 {img_idx}를 선택하셨습니다.")
 
 
@@ -171,7 +157,7 @@ def Practice1():
 
         with col_1:
             
-            if selectedImageUrl is not None:
+            if clicked is not None:
 
                 min_ttl1 = f"Result 1 : selected <i>Image</i>"
                 st.markdown(f"""## <h5 style='text-align: center; color: #3b3b3b; font-size:250%, font-weight = 600'>{min_ttl1}</h5>""", 
@@ -180,8 +166,8 @@ def Practice1():
                 with st.spinner('Loading for Scene Graph...⌛️'):
                     time.sleep(0.5)
 
-                    st.image(selectedImageUrl, width = 500)
-                    #img_idx = int(selectedImageUrl[selectedImageUrl.index('.jpg')-7:selectedImageUrl.index('.jpg')])
+                    st.image(imageurl, width = 500)
+                   
                     
                 
         with col_3:
@@ -190,7 +176,7 @@ def Practice1():
             st.markdown(f"""## <h5 style='text-align: center; color: #3b3b3b; font-size:250%, font-weight = 100'>{min_ttl2}</h5>""", 
                         unsafe_allow_html=True)
 
-            if selectedImageUrl is not None:
+            if clicked is not None:
 
                 graph_visual(df_dict[img_idx],'subject','object','predicate',width=900,height=800)
 
