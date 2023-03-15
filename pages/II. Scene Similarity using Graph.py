@@ -190,10 +190,9 @@ MCS는 Jaccard 유사도와 비슷하지만, Jaccard 유사도 달리 **최대�
 
 
 def Practice():
-
-      ttl_txt1_1 = """☑ <strong style="font-size : 110%;">유사 이미지</strong> 및 Scene Graph 추출"""
-    st.markdown(f"""## <h3 style='text-align: center; color: #3b3b3b; font-size:100%, font-weight = normal'>{ttl_txt1_1}</h3>""", 
-                unsafe_allow_html=True)
+    
+    ttl_txt1_1 = """☑ <strong style="font-size : 110%;">유사 이미지</strong> 및 Scene Graph 추출"""
+    st.markdown(f"""## <h3 style='text-align: center; color: #3b3b3b; font-size:100%, font-weight = normal'>{ttl_txt1_1}</h3>""", unsafe_allow_html=True)
     st.text("")
     st.write("원하시는 이미지를 클릭하면, 아래 **유사한 이미지 10개** 및 **Scene Graph**가 출력됩니다.")
 
@@ -208,22 +207,22 @@ def Practice():
     imageCarouselComponent = components.declare_component("image-carousel-component", path="/app/streamlit_scenegraph/Streamlit-Image-Carousel/frontend/public")
     
     imageUrls = [ 
-        "https://i.ibb.co/8syMZ35/61539.jpg",
-        "https://i.ibb.co/W3rJhGt/107992.jpg",
-        "https://i.ibb.co/kJyxCxD/2359568.jpg",
-        "https://i.ibb.co/wNCwr2y/2370806.jpg",
-        "https://i.ibb.co/pQNbp0N/2368620.jpg",
-        "https://i.ibb.co/FkQWyBb/2344853.jpg",
-        "https://i.ibb.co/84hqYNJ/1593031.jpg",
-        "https://i.ibb.co/qsP9HPz/713803.jpg",
-        "https://i.ibb.co/gRrxsQ2/2375247.jpg",
-        "https://i.ibb.co/WWTZjZM/2349118.jpg",
-        "https://i.ibb.co/pZcyqkZ/2343751.jpg",
-        "https://i.ibb.co/jzrMsqB/285795.jpg",
-        "https://i.ibb.co/27ngQZ6/2348780.jpg",
-        "https://i.ibb.co/4mHbJy6/2353558.jpg",
-        "https://i.ibb.co/qgpCbHB/2373302.jpg",
-        "https://i.ibb.co/WtR4rSC/2325386.jpg"
+        "https://cs.stanford.edu/people/rak248/VG_100K/61539.jpg",
+        "https://cs.stanford.edu/people/rak248/VG_100K/107992.jpg",
+        "https://cs.stanford.edu/people/rak248/VG_100K/2359568.jpg",
+        "https://cs.stanford.edu/people/rak248/VG_100K/2370806.jpg",
+        "https://cs.stanford.edu/people/rak248/VG_100K/2368620.jpg",
+        "https://cs.stanford.edu/people/rak248/VG_100K/2344853.jpg",
+        "https://cs.stanford.edu/people/rak248/VG_100K/1593031.jpg",
+        "https://cs.stanford.edu/people/rak248/VG_100K/713803.jpg",
+        "https://cs.stanford.edu/people/rak248/VG_100K/2375247.jpg",
+        "https://cs.stanford.edu/people/rak248/VG_100K/2349118.jpg",
+        "https://cs.stanford.edu/people/rak248/VG_100K/2343751.jpg",
+        "https://cs.stanford.edu/people/rak248/VG_100K/285795.jpg",
+        "https://cs.stanford.edu/people/rak248/VG_100K/2348780.jpg",
+        "https://cs.stanford.edu/people/rak248/VG_100K/2353558.jpg",
+        "https://cs.stanford.edu/people/rak248/VG_100K/2373302.jpg",
+        "https://cs.stanford.edu/people/rak248/VG_100K/2325386.jpg"
         ]
     selectedImageUrl = imageCarouselComponent(imageUrls=imageUrls, height=150)
     col01,col02,col03 = st.columns(3)
