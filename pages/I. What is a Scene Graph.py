@@ -132,7 +132,7 @@ def Practice1():
     st.text("")
     st.write("원하시는 이미지를 클릭하면, 아래 Scene Graph가 출력됩니다.")
     
-     image_lst = ['2320618','2335472','2343076','61539','2370806','2368620','2344853','2343751','285795','2348780','2349118','2353558']
+    image_lst = ['2320618','2335472','2343076','61539','2370806','2368620','2344853','2343751','285795','2348780','2349118','2353558']
     img_path = """https://cs.stanford.edu/people/rak248/VG_100K/"""
     imageUrls = [img_path + f"{img_num}.jpg" for img_num in image_lst]
     cont_lst = [f"""<a href='#' id={i}><img width='15%' src="{imageUrl}"></a>""" for i, imageUrl in enumerate(imageUrls)]
