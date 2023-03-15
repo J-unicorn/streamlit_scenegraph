@@ -1,18 +1,13 @@
 # -*- coding: utf8 -*-
 
 import sys
-
-sys.path.append('/app/streamlit_scenegraph/pages')
-import subprocess
-subprocess.call(["apt-get","-y","install","libgl1-mesa-glx"])
-
+import requests
 from PIL import Image
 import streamlit as st
 import pandas as pd
 import numpy as np
 import json
 from streamlit_option_menu import option_menu
-from utils.scene_graph import *
 
 st.set_page_config(layout="wide")
 
@@ -45,7 +40,6 @@ abstr_text = '''
             Scenegraph Generation은 Image 및 Video 에서의 Scene에 대하여 이미지 내의 Object를 추출하고 \n
             Object간의 관계를 추출하여 Scene Graph SPO를 생성할 수 있는 기술이다. 함께 살펴보도록 하자 
              '''
-
 
 #----------------------------------------------------------------------------------------------------------------
 
@@ -136,14 +130,12 @@ def Practice():
     pred_button = None
     df = None
     
+    def image_extraction(image_file):
+        resp = requests.post("http://112.221.131.146:1650/predict", 
+                         files={"file": open('image_file','rb')})
+        js=resp.json()
+        return pd.read_json(js)
     
-    from mmcv import Config
-    import time
-
-    image_model_ckt ='/home/agens/conda_user/scene/aivg/streamlit/models/epoch_60.pth'
-    cfg = Config.fromfile('/home/agens/conda_user/scene/aivg/streamlit/models/OpenPSG/configs/psgtr/psgtr_r50_psg_inference.py')
-    image_model=Model(image_model_ckt,cfg)
-
 
     col_1, col_2, col_3, col_4 = st.columns([4.8, 0.2, 4.8, 0.2])
     with col_1:
@@ -161,10 +153,7 @@ def Practice():
         if image_file:
             st.markdown("#### SceneGraph 생성을 해보세요.")
             pred_button = st.button("Scene Graph Detection")
-            org_image = Image.open(image_file, mode='r').convert('RGB')
-            st.image(org_image, caption='Upload Image')
-            img_array = np.array(org_image)
-            df = image_model.image_extraction(img_array)
+            df = image_extraction(image_file)
             if pred_button:
                 st.session_state.predbtn_state = True
     
