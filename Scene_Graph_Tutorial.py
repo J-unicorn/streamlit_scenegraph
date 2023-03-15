@@ -7,8 +7,7 @@ from PIL import Image
 import streamlit.components.v1 as components
 
 subprocess.call(["apt-get","install","libgl1-mesa-glx"])
-subprocess.call(["npm","init"])
-subprocess.call(["npm","install"])
+subprocess.call(["npm","run","build"])
 
 
 # 하기 내용은 표시 텍스트
