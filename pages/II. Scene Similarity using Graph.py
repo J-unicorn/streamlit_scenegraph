@@ -209,7 +209,7 @@ def Practice():
     content = "".join(cont_lst)
     clicked = click_detector(content)
     
-    col01,col02,col03 = st.columns(3)
+    col01,col02 = st.columns(2)
     st.markdown("___")
 
     col1, col2, col3, col4, col5= st.columns([3.2, 0.2, 3.2, 0.2, 6.4])
@@ -249,6 +249,7 @@ def Practice():
             photo = filteredImages[st.session_state.counter%10]
             df_idx = img_num_lst[st.session_state.counter%10]
             show_btn = col01.button("유사한 이미지 결과 확인하기(계속)⏭️",on_click=showPhoto,args=([photo, df_dict[df_idx]]))
+            col01.write("Button을 Click하면 유사한 이미지와 SceneGraph가 나옵니다.")
             min_ttl2 = f"Result 1 : Similar Image"
             st.markdown(f"""<h5 style='text-align: center; color: #3b3b3b; font-size:250%, font-weight = 600'>{min_ttl2}</h5>""",
             unsafe_allow_html=True)
