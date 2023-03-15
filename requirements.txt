@@ -3,8 +3,6 @@ imageio==2.4.1
 imageio-ffmpeg==0.4.8
 imbalanced-learn==0.10.0
 imblearn==0.0
-mmcv-full==1.4.3
-mmdet==2.20.0
 networkx==2.8.8
 ninja==1.11.1
 numba 
@@ -20,4 +18,5 @@ streamlit-option-menu==0.3.2
 streamlit-pandas==0.0.9
 st-click-detector
 torch
-
+mmcv-full
+mmdet
