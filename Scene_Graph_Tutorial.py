@@ -3,7 +3,9 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from PIL import Image
-import streamlit.components.v1 as components
+import subprocess
+subprocess.call(["apt-get","-y","install","libgl1-mesa-glx"])
+
 
 # 하기 내용은 표시 텍스트
 st.set_page_config(
