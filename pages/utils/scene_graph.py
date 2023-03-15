@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-import mmcv
 import PIL
 from streamlit_agraph import agraph,Node,Edge,Config
 from streamlit_agraph import Config as aconfig
@@ -111,8 +110,7 @@ class Model:
         img = PIL.Image.fromarray(img)
         converter = PIL.ImageEnhance.Color(img)
         img = converter.enhance(0.01)
-    #    if out_file is not None:
-    #       mmcv.imwrite(np.asarray(img), 'bw'+out_file)
+    
 
         # Draw masks
         result = inference_detector(self.model, image)
