@@ -156,7 +156,7 @@ def Practice():
             pred_button = st.button("Scene Graph Detection")
             org_image = Image.open(image_file, mode='r').convert('RGB')
             buffer = io.BytesIO()
-            org_image.save(buffer, quality=100)
+            org_image.save(buffer,'png',quality=100)
             
             df = image_extraction(org_image)
             if pred_button:
