@@ -7,6 +7,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import json
+import io
 from streamlit_option_menu import option_menu
 
 st.set_page_config(layout="wide")
@@ -130,9 +131,9 @@ def Practice():
     pred_button = None
     df = None
     
-    def image_extraction(image_arr):
+    def image_extraction(image):
         resp = requests.post("http://112.221.131.146:1650/predict", 
-                         files={"file": open(image_arr,'rb')})
+                         files={"file": open(image,'rb')})
         js=resp.json()
         return pd.read_json(js)
     
@@ -154,8 +155,10 @@ def Practice():
             st.markdown("#### SceneGraph 생성을 해보세요.")
             pred_button = st.button("Scene Graph Detection")
             org_image = Image.open(image_file, mode='r').convert('RGB')
-            img_array = np.array(org_image)
-            df = image_extraction(img_array)
+            buffer = io.BytesIO()
+            org_image.save(buffer, quality=100)
+            
+            df = image_extraction(org_image)
             if pred_button:
                 st.session_state.predbtn_state = True
     
