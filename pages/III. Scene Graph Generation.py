@@ -3,6 +3,8 @@
 import sys
 
 sys.path.append('/app/streamlit_scenegraph/')
+import subprocess
+subprocess.call(["apt-get","-y","install","libgl1-mesa-glx"])
 
 from PIL import Image
 import streamlit as st
