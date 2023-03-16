@@ -21,6 +21,14 @@ warnings.filterwarnings('ignore') #경고 무시용
 from utils.vis import graph_visual
 
 
+st.markdown("""
+<style>
+.center {
+    text-align: center; 
+    font-size:250% !important;
+}
+""", unsafe_allow_html=True)
+
 
 st.set_page_config(layout="wide")
 
