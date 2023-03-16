@@ -134,7 +134,7 @@ def Practice():
     def image_extraction(image):
         resp = requests.post("http://112.221.131.146:1650/predict", data=image)
         js=resp.json()
-        return pd.read_json(js)
+        return pd.DataFrame(js)
     
 
     col_1, col_2, col_3, col_4 = st.columns([4.8, 0.2, 4.8, 0.2])
