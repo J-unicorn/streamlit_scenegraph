@@ -21,6 +21,7 @@ warnings.filterwarnings('ignore') #경고 무시용
 from utils.vis import graph_visual
 
 
+st.set_page_config(layout="wide")
 st.markdown("""
 <style>
 .center {
@@ -28,10 +29,6 @@ st.markdown("""
     font-size:250% !important;
 }
 """, unsafe_allow_html=True)
-
-
-st.set_page_config(layout="wide")
-
 
 def Intro():
     st.markdown('<h1 class ="center"> Scene Graph를 이용한 장면(Scene) 간 유사도 </h1>', unsafe_allow_html=True)
