@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 
-st.markdown("### R&D 개요") 
+st.title("R&D 개요") 
 st.text("")
 st.text("")
 st.subheader("""1. 배경""")
