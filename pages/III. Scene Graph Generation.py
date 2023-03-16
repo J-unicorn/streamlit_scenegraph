@@ -22,8 +22,7 @@ st.markdown("""
 <style>
 .center {
     text-align: center; 
-    color: Black;
-    font-size:150% !important;
+    font-size:250% !important;
 }
 </style>
 """, unsafe_allow_html=True)
