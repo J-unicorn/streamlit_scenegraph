@@ -155,9 +155,10 @@ def Practice():
         if image_file:
             st.markdown("#### SceneGraph 생성을 해보세요.")
             pred_button = st.button("Scene Graph Detection")
-           # org_image = Image.open(image_file, mode='r').convert('RGB')
-          #  st.image(org_image, caption='Upload Image')
             df = image_extraction(image_file)
+            org_image = Image.open(image_file, mode='r').convert('RGB')
+            st.image(org_image, caption='Upload Image')
+            
             if pred_button:
                 st.session_state.predbtn_state = True
     
