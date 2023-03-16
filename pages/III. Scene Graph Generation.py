@@ -150,14 +150,14 @@ def Practice():
         if uploadbtn or st.session_state.uploadbtn_state:
             st.session_state.uploadbtn_state = True
             image_file = st.file_uploader("버튼을 누르거나, 사진을 마우스로 옮겨 사진을 업로드 해주세요.", type=["jpg", "jpeg","png","svg"])
+            open_image = Image.open(image_file, mode='r').convert('RGB')
+            col_3.image(open_image, caption='Upload Image')
         
     with col_3:
         if image_file:
             st.markdown("#### SceneGraph 생성을 해보세요.")
             pred_button = st.button("Scene Graph Detection")
-            open_image = Image.open(image_file, mode='r').convert('RGB')
-            st.image(open_image, caption='Upload Image')
-            
+           
             df = image_extraction(image_file)
            
             
