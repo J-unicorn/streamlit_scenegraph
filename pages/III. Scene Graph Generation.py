@@ -111,14 +111,14 @@ def Explanation():
             아래의 그림3은 스마트폰을 사용하는 모습을 SceneGraph 생성하는 예시입니다. \
             \n 각각의 객체를 잘 인식하고 객체의 label을 잘 예측하는 것을 확인할 수 있습니다.
             """)  
-    col_1, col_2, col_3, col_4 = st.columns([4.8, 0.2, 4.8, 0.2])
+    col_1, col_2, = st.columns(2)
     with col_1:
         img4 = load_image(img4_path)
-        st.image(img4, width=600,caption ='그림3. Scene graph generated for image')
+        st.image(img4,caption ='그림3. Scene graph generated for image')
 
-    with col_3:
+    with col_2:
         img5 = load_image(img5_path)
-        st.image(img5, width=600,caption ='그림4. Relationship labels for image')
+        st.image(img5,caption ='그림4. Relationship labels for image')
     st.write("""
             그림4와 같이 방향이 지정된 엣지 레이블을 예측할 수 있으며, 각각의 모델의 예측점수도 함께 구할 수 있습니다. \
             \n (Phone)-[in]->(hand)의 관계 예측이 가장 높은 점수를 가지는 것을 확인할 수 있습니다. 
