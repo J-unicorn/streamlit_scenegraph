@@ -34,7 +34,7 @@ img1_path = img_path+'part1_img1.PNG'
 img2_path = img_path+'part3_img1.PNG'
 img3_path = img_path+'part3_img2.PNG'
 img4_path = img_path+'part3_img3.PNG'
-img5_path = img_path+'part3_img4.PNGv'
+img5_path = img_path+'part3_img4.PNG'
 
 #----------------------------------------------------------------------------------------------------------------
 
