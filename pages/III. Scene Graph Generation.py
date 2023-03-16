@@ -132,7 +132,7 @@ def Practice():
     df = None
     
     def image_extraction(image):
-        resp = requests.post("http://112.221.131.146:1650/predict", files={"file": image))
+        resp = requests.post("http://112.221.131.146:1650/predict", files={"file": image})
         js=resp.json()
         return pd.DataFrame(js)
     
