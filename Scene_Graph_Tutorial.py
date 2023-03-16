@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 
-st.markdown("### <h1 style='text-align: left; color: Black; font-size:2.5em ; font-weight : bold'>• R&D 개요\n</h1>", unsafe_allow_html=True) 
+st.markdown("### R&D 개요") 
 st.text("")
 st.text("")
 st.subheader("""1. 배경""")
