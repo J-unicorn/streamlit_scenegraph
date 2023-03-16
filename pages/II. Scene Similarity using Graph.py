@@ -20,22 +20,24 @@ warnings.filterwarnings('ignore') #경고 무시용
 
 from utils.vis import graph_visual
 
+
+
 st.set_page_config(layout="wide")
 
 
 def Intro():
-    st.markdown("### <h1 style='text-align: center; color: Black; font-size:300%'>Scene Graph를 이용한 장면(Scene) 간 유사도</h1>", 
-    unsafe_allow_html=True)
+    st.markdown('<h1 class ="center"> Scene Graph를 이용한 장면(Scene) 간 유사도 </h1>', unsafe_allow_html=True)
+
     det_exp = """
 &nbspScene Graph를 이용하여 이미지나 영상 간 특정 <strong>장면(scene)</strong>에 대해 객체의 
 <span>행위에 대한 SPO</span>를 이용하여 <strong>유사도를 산출</strong>할 수 있습니다.<br>
 &nbsp이번에는 행위에 대한 SPO의 <strong>⑴빈도 기반 방법</strong>과 <strong>⑵그래프의 구조 기반 방법</strong>에 대해 설명하고, 그래프의 구조 기반 방법론을 적용하여 시연을 할 수 있습니다."""
 
-    det_exp_font = f"""<h6 style='text-align: left; color: #1b1b1b; font-family : times arial; 
+    det_exp_font = f"""<h6 style='text-align: left;font-family : times arial; 
     line-height : 165%; font-size : 117%; font-weight : 400'>{det_exp}\n\n</h6>"""
 
 
-    st.markdown("#### <h1 style='text-align: left; color: #565656; font-size:230%'>Intro</h1>", unsafe_allow_html=True)
+    st.markdown("#### <h1 style='text-align: left;font-size:230%'>Intro</h1>", unsafe_allow_html=True)
     
     col1,col2 = st.columns([8.5,1])
 
@@ -48,16 +50,15 @@ def Intro():
 
 def Explanation():
     main_ttl = "Maximum Common Subgraph(MCS) 유사도를 이용한<br>장면(Scene) 간 유사도 설명 및 예시"
-    st.markdown(f"""### <h1 style='text-align: center; color: Black; font-size:250%'>{main_ttl}</h1>""", 
-    unsafe_allow_html=True)
+    st.markdown(f""" <h1 class ="center"> {main_ttl} </h1>""", unsafe_allow_html=True)
     det_exp = """
 &nbsp이번에는 <strong>⑴빈도 기반 방법</strong>과 <strong>⑵그래프의 구조 기반 방법</strong> 두 가지의 유사도 설명방법을 기술하고,
 그래프의 구조적 특징을 이용하여 장면 간 <strong>핵심행위</strong>를 파악하기 용이한 <strong>MCS 유사도 방법론</strong>을 이용한 장면 간 유사도의 설명과 예시를 자세히 소개합니다.<br><br>"""
 
-    det_exp_font = f"""<h6 style='text-align: left; color: #1b1b1b; font-family : times arial; 
+    det_exp_font = f"""<h6 style='text-align: left; font-family : times arial; 
     line-height : 165%; font-size : 117%; font-weight : 400'>{det_exp}\n\n</h6>"""
     
-    st.markdown("#### <h1 style='text-align: left; color: #565656; font-size:230%'>Explanation</h1>", 
+    st.markdown("#### <h1 style='text-align: left; font-size:230%'>Explanation</h1>", 
     unsafe_allow_html=True)
     st.write("")
     
@@ -70,7 +71,7 @@ def Explanation():
 
 
 
-    st.markdown("""## <h1 style='text-align: left; color: #3b3b3b; font-size:180%'>☑ 장면의 SPO를 통한 유사도 산출방법</h1>""", 
+    st.markdown("""## <h1 style='text-align: left; font-size:180%'>☑ 장면의 SPO를 통한 유사도 산출방법</h1>""", 
     unsafe_allow_html=True)
     img_1 = '/app/streamlit_scenegraph/image/part2_img_1_1.PNG'
     img1 = Image.open(img_1)
@@ -83,7 +84,7 @@ def Explanation():
     
     with col1:
         title1 = "SPO 빈도 기반 장면 간 유사도 산출"
-        st.markdown(f"#### <h1 style='text-align: left; color: #022ea9; font-size:150%'>{title1}</h1>",
+        st.markdown(f"#### <h1 style='text-align: left; font-size:150%'>{title1}</h1>",
         unsafe_allow_html=True)
         img_1 = '/app/streamlit_scenegraph/image/part2_img_1_1.PNG'
         img1 = Image.open(img_1)
@@ -92,7 +93,7 @@ def Explanation():
         st.image(img1, width = 450)
     with col3:
         title1 = "동형 그래프 구조적 특성에 따른 유사도 산출"
-        st.markdown(f"#### <h1 style='text-align: left; color: #022ea9; font-size:140%'>{title1}</h1>",
+        st.markdown(f"#### <h1 style='text-align: left; font-size:140%'>{title1}</h1>",
         unsafe_allow_html=True)
         img_2 = '/app/streamlit_scenegraph/image/part2_img_1_2.PNG'
         img2 = Image.open(img_2)
@@ -109,15 +110,14 @@ def Explanation():
         st.write("\n")
         st.write("\n")
         img1_text = """
-<strong style="color:#515151; font-size : 110%">• SPO 빈도 기반 장면 간 유사도 산출</strong><br>
+<strong style=" font-size : 110%">• SPO 빈도 기반 장면 간 유사도 산출</strong><br>
 &nbsp&nbsp&nbsp&nbsp◦ <strong>동일 이미지(노드)</strong> 내 두개의 <strong>동일한 객체(명사노드)</strong>가 포함<br>
 &nbsp&nbsp&nbsp&nbsp◦ <strong>두개의 객체(명사노드)</strong>간 <strong>관계(술어엣지)</strong>가 존재<br><br>
-<strong style="color:#515151; font-size : 110%">• 가중치 부여</strong><br>
+<strong style="font-size : 110%">• 가중치 부여</strong><br>
 &nbsp&nbsp&nbsp&nbsp◦ <strong>1)가중치를 동일하게 1(빈도 수)로 부여</strong><br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp혹은 <strong>2)특정 행위에 대한 SPO에 가중치 부여</strong><br>"""
         img1_text_html = f"""
-<h6 style='text-align: left;
-color: #Black; font-family : times arial; line-height : 200%; 
+<h6 style='text-align: left; font-family : times arial; line-height : 200%; 
 font-size : 90%; font-weight : 300'>{img1_text}\n\n</h6>"""
         st.markdown(img1_text_html, unsafe_allow_html=True)
         st.text("")
@@ -125,16 +125,16 @@ font-size : 90%; font-weight : 300'>{img1_text}\n\n</h6>"""
         st.write("\n")
         st.write("\n")
         img2_text = """
-<strong style="color:#515151; font-size : 110%">• 그래프 구조적 특성 기반 Maximum Common Subgraph(MCS) 유사도 산출</strong><br>
+<strong style="font-size : 110%">• 그래프 구조적 특성 기반 Maximum Common Subgraph(MCS) 유사도 산출</strong><br>
 &nbsp&nbsp&nbsp&nbsp◦ 두 그래프 간 겹치는 <strong>가장 큰 부분 그래프의 <i>비율</i></strong><br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp￭ 단, 위 이미지와 같이 부분 그래프가 여러개 있을 경우,<br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<strong>가장 큰 부분그래프의 비율</strong>로 비교<br><br>
-<strong style="color:#515151; font-size : 105%">• Maximum Common Subgraph(MCS)의 장점</strong><br>
+<strong style=" font-size : 105%">• Maximum Common Subgraph(MCS)의 장점</strong><br>
 &nbsp&nbsp&nbsp&nbsp◦ 가장 큰 공통 부분그래프로 그래프 구조적 특징을</br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp이용한 <strong>인과성 추론 및 핵심행위</strong> 파악"""
         img2_text_html = f"""
 <h6 style='text-align: left;
-color: #Black; font-family : times arial; line-height : 200%; 
+font-family : times arial; line-height : 200%; 
 font-size : 90%; font-weight : 500'>{img2_text}\n\n</h6>"""
         st.markdown(img2_text_html, unsafe_allow_html=True)
         st.text("")
@@ -142,15 +142,15 @@ font-size : 90%; font-weight : 500'>{img2_text}\n\n</h6>"""
     st.markdown("___")
 
 
-#   st.markdown("""## <h1 style='text-align: left; color: #3b3b3b; font-size:18""")
-    st.markdown("""## <h1 style='text-align: left; color: #3b3b3b; font-size:180%'>☑ Maximum Common Subgraph(MCS) Similarity</h1>""", 
+#   st.markdown("""## <h1 style='text-align: left; font-size:18""")
+    st.markdown("""## <h1 style='text-align: left; font-size:180%'>☑ Maximum Common Subgraph(MCS) Similarity</h1>""", 
     unsafe_allow_html=True)
     st.write("""
 MCS는 Jaccard 유사도와 비슷하지만, Jaccard 유사도 달리 **최대로 겹치는** 인스턴스(노드)의 수를 비율화 한 것입니다.\n
 즉, 다른 겹치는 부분 그래프의 부분적인 행위가 아닌 **핵심 행위**를 파악하여 **유사도를 산출**하는 경향이 있습니다.\n
 아래 예시와 함께 살펴보겠습니다.""")
     title2 = "Maximum Common Subgraph(MCS)를 이용한 Scene Graph 구조적 유사도 산출"
-    st.markdown(f"#### <h1 style='text-align: left; color: #022ea9; font-size:150%'>{title2}</h1>",
+    st.markdown(f"#### <h1 style='text-align: left; font-size:150%'>{title2}</h1>",
     unsafe_allow_html=True)
     img_1 = '/app/streamlit_scenegraph/image/part2_img2.PNG'
     img1 = Image.open(img_1)
@@ -161,7 +161,7 @@ MCS는 Jaccard 유사도와 비슷하지만, Jaccard 유사도 달리 **최대�
     st.text("")
 
     img2_text = """
-<strong style="color:#515151; font-size : 110%">• MCS 유사도 산출 과정</strong><br>
+<strong style=" font-size : 110%">• MCS 유사도 산출 과정</strong><br>
 &nbsp&nbsp&nbsp&nbsp◦ 그래프의 <strong>하나의 구성요소(Component)로 되어있는 경우</strong><br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp￭ 공통된 노드 및 엣지의 연결관계를 이용한
 <strong>최대 공통 부분 그래프(Maximum Common Subgraph) 추출</strong><br>
@@ -178,7 +178,7 @@ MCS는 Jaccard 유사도와 비슷하지만, Jaccard 유사도 달리 **최대�
 * 동일한 그래프라도 <i>최대 공통 부분그래프</i>로 연산을 하여, 값이 1이 안나올 수 있음.</span><br><br>"""
     img2_text_html = f"""
     <h6 style='text-align: left;
-    color: #Black; font-family : times arial; line-height : 200%; 
+    font-family : times arial; line-height : 200%; 
     font-size : 90%; font-weight : 500'>{img2_text}\n\n</h6>"""
     st.markdown(img2_text_html, unsafe_allow_html=True)
     st.text("")
@@ -189,7 +189,7 @@ MCS는 Jaccard 유사도와 비슷하지만, Jaccard 유사도 달리 **최대�
 def Practice():
     
     ttl_txt1_1 = """☑ <strong style="font-size : 110%;">유사 이미지</strong> 및 Scene Graph 추출"""
-    st.markdown(f"""## <h3 style='text-align: center; color: #3b3b3b; font-size:100%, font-weight = normal'>{ttl_txt1_1}</h3>""", unsafe_allow_html=True)
+    st.markdown(f""" <h1 class ="center"> {ttl_txt1_1} </h1>""", unsafe_allow_html=True)
     st.text("")
     st.write("원하시는 이미지를 클릭하면, 아래 **유사한 이미지 10개** 및 **Scene Graph**가 출력됩니다.")
 
@@ -232,7 +232,7 @@ def Practice():
         if clicked is not None:
             imageurl=imageUrls[int(clicked)] if clicked else imageUrls[0]
             min_ttl1 = f"Input Image"
-            st.markdown(f"""<h6 style='text-align: center; color: #3b3b3b; font-size:30%, font-weight = 600'>{min_ttl1}</h6>""",
+            st.markdown(f"""<h6 style='text-align: center; font-size:30%, font-weight = 600'>{min_ttl1}</h6>""",
             unsafe_allow_html=True)
             img_idx = int(imageurl.split('/')[-1][:-4])
             img_num_lst = sim_dict[img_idx]
@@ -251,12 +251,12 @@ def Practice():
             show_btn = col01.button("유사한 이미지 결과 확인하기(계속)⏭️",on_click=showPhoto,args=([photo, df_dict[df_idx]]))
             col01.write("Button을 Click하면 유사한 이미지와 SceneGraph가 나옵니다.")
             min_ttl2 = f"Result 1 : Similar Image"
-            st.markdown(f"""<h5 style='text-align: center; color: #3b3b3b; font-size:250%, font-weight = 600'>{min_ttl2}</h5>""",
+            st.markdown(f"""<h5 style='text-align: center;  font-size:250%, font-weight = 600'>{min_ttl2}</h5>""",
             unsafe_allow_html=True)
     with col5:
         if clicked is not None:
             min_ttl3 = f"Result 2 : Scene Graph of Similar Image"
-            st.markdown(f"""<h5 style='text-align: center; color: #3b3b3b; font-size:500%, font-weight = 600'>{min_ttl3}</h5>""",
+            st.markdown(f"""<h5 style='text-align: center;  font-size:500%, font-weight = 600'>{min_ttl3}</h5>""",
                         unsafe_allow_html=True)
 
 
