@@ -133,8 +133,8 @@ def Practice():
     pred_button = None
     df = None
     
-    def image_extraction(image):
-        resp = requests.post("http://112.221.131.146:1650/predict", files={"file": image})
+    def image_extraction(img):
+        resp = requests.post("http://112.221.131.146:1650/predict", files={"file": img})
         js=resp.json()
         return pd.DataFrame(js)
     
@@ -154,8 +154,9 @@ def Practice():
     with col_3:
         if image_file:
             st.markdown("#### SceneGraph 생성을 해보세요.")
+            file = image_file
             pred_button = st.button("Scene Graph Detection")
-            st.image(Image.open(image_file), caption='Upload Image')
+            st.image(Image.open(file), caption='Upload Image')
             df = image_extraction(image_file)
            
             
