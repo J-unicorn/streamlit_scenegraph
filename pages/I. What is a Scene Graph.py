@@ -24,8 +24,7 @@ st.markdown("""
 <style>
 .center {
     text-align: center; 
-    color: Black;
-    font-size:150% !important;
+    font-size:250% !important;
 }
 """, unsafe_allow_html=True)
 
@@ -44,8 +43,7 @@ def load_image(img_path):
 
 
 def Intro():
-
-    st.markdown("### <h1 style='text-align: center; color: Black; font-size:350%'>Scene Graph란?</h1>", unsafe_allow_html=True)
+    st.markdown('<h1 class ="center"> Scene Graph란?</h1>', unsafe_allow_html=True)
 
     det_exp = """
                 Scene Graph(장면 그래프)란 이미지 및 영상 데이터의 <strong>장면(scene)에서 객체(object) 및 관계(relationship)를 추출</strong>하고 이를 
@@ -54,11 +52,11 @@ def Intro():
                 <strong>그래프 데이터 베이스(GDB)</strong>를 이용한 <strong>지식그래프(Knowledge Graph)</strong>로 표현하여, 관계기반 데이터의 조회 및 추출을 편리하게하고
                 더 나아가 이미지나 영상의 장면 유사도, 예측 그리고 자동화 시스템을 만드는 것을 목표로 합니다."""
     
-    det_exp_font = f"""<h6 style='text-align: left; color: #1b1b1b; font-family : times arial; 
+    det_exp_font = f"""<h6 style='text-align: left; font-family : times arial; 
     line-height : 165%; font-size : 117%; font-weight : 400'>{det_exp}\n\n</h6>"""
 
 
-    st.markdown("#### <h1 style='text-align: left; color: #565656; font-size:230%'>Intro</h1>", unsafe_allow_html=True)
+    st.markdown("#### <h1 style='text-align: left;  font-size:230%'>Intro</h1>", unsafe_allow_html=True)
     st.write("")
     
     col1,col2 = st.columns([8.5, 1])
@@ -71,7 +69,7 @@ def Intro():
 
 def Explanation():
 
-    st.markdown("### <h1 style='text-align: center; color: Black; font-size:270%'>그래프 데이터베이스(GDB)를 이용한 Scene Graph</h1>", unsafe_allow_html=True)
+    st.markdown("### <h1 style='text-align: center;font-size:270%'>그래프 데이터베이스(GDB)를 이용한 Scene Graph</h1>", unsafe_allow_html=True)
     
     det_exp = """
                 &nbsp이번 챕터에는 <strong>그래프 데이터 베이스(GDB)</strong>를 사용하여 
@@ -79,11 +77,11 @@ def Explanation():
                 &nbspScene Graph를 GDB의 강점인 <strong>속성(property)</strong>정보를 이용한 
                 LPG(Labeled Property Graph) 형태로 모델링하여 단어 간의 SPO의 관계를 유연하게 설명하고, 다양한 그래프 알고리즘 등을 사용할 수 있습니다."""
     
-    det_exp_font = f"""<h6 style='text-align: left; color: #1b1b1b; font-family : times arial; 
+    det_exp_font = f"""<h6 style='text-align: left;  font-family : times arial; 
     line-height : 165%; font-size : 117%; font-weight : 400'>{det_exp}\n\n</h6>"""
 
 
-    st.markdown("#### <h1 style='text-align: left; color: #565656; font-size:230%'>Explanation</h1>", unsafe_allow_html=True)
+    st.markdown("#### <h1 style='text-align: left;  font-size:230%'>Explanation</h1>", unsafe_allow_html=True)
     st.write("")
     
     col1,col2 = st.columns([8.5,1])
@@ -93,7 +91,7 @@ def Explanation():
         st.write("")
     st.markdown("___")
 #----------------------------------------------------------------------------------------------------------------
-    st.markdown("""## <h1 style='text-align: left; color: #3b3b3b; font-size:180%'>☑ GDB를 이용한 Scene Graph 모델링</h1>""", unsafe_allow_html=True)
+    st.markdown("""## <h1 style='text-align: left; font-size:180%'>☑ GDB를 이용한 Scene Graph 모델링</h1>""", unsafe_allow_html=True)
     img_2 = '/app/streamlit_scenegraph/image/part1_img2.PNG'
     img2 = load_image(img_2)
     text2 = """
@@ -106,19 +104,19 @@ def Explanation():
     st.text("")
 
     img2_text = """
-            <strong style="color:#515151; font-size : 120%">• 술어(predicate)를 <i>노드(node)</i>로 그래프 모델링하는 경우</strong><br>
+            <strong style=" font-size : 120%">• 술어(predicate)를 <i>노드(node)</i>로 그래프 모델링하는 경우</strong><br>
             &nbsp&nbsp&nbsp&nbsp◦ 일반적으로 Scene Graph 모델링 시 속성(property)정보가 없는 RDF(Resource Description Framework) 
             형태의<br>
             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp그래프로써 가장 많이 사용하는 기법<br>
             &nbsp&nbsp&nbsp&nbsp◦ 술어를 노드로 표현하여 직관적일 수 있지만, <i>노드의 수가 많아져서 연산량 증가</i><br><br>
-            <strong style="color:#515151; font-size : 120%">• 술어(predicate)를 <i>엣지(edge)</i>로 그래프 모델링하는 경우</strong><br>
+            <strong style="font-size : 120%">• 술어(predicate)를 <i>엣지(edge)</i>로 그래프 모델링하는 경우</strong><br>
             &nbsp&nbsp&nbsp&nbsp◦ 객체 간 관계를 나타내는 <strong>술어를 엣지</strong>로 표현하여 기존 SPO의 형태를 유연하게 나타낸 그래프 모델링<br>
             &nbsp&nbsp&nbsp&nbsp◦ GDB의 <i>속성정보를 이용</i>하여 술어에 대한 부가 정보를 엣지의 속성정보로 삽입 가능<br>
             &nbsp&nbsp&nbsp&nbsp◦ 술어를 엣지로 표현하여 노드로 표현했을 때보다 <strong>적은 용량의 DB모델 및 연산속도 감소</strong>"""
     #st.wrtie(img1_text)
     img2_text_html = f"""
     <h6 style='text-align: left;
-    color: #Black; font-family : times arial; line-height : 200%; 
+    font-family : times arial; line-height : 200%; 
     font-size : 100%; font-weight : 500'>{img2_text}\n\n</h6>"""
     st.markdown(img2_text_html, unsafe_allow_html=True)
     st.text("")
@@ -127,8 +125,8 @@ def Explanation():
 def Practice1():
 
     ttl_txt1_1 = "☑ 이미지를 이용한 및 SPO Scene Graph 추출"
-    st.markdown(f"""## <h1 style='text-align: center; color: #3b3b3b; font-size:150%'>{ttl_txt1_1}</h1>""", 
-    unsafe_allow_html=True)
+    st.markdown(f""" <h1 class ="center"> {ttl_txt1_1} </h1>""", unsafe_allow_html=True)
+   
     st.text("")
     st.write("원하시는 이미지를 클릭하면, 아래 Scene Graph가 출력됩니다.")
     
@@ -160,7 +158,7 @@ def Practice1():
             if clicked is not None:
 
                 min_ttl1 = f"Result 1 : selected <i>Image</i>"
-                st.markdown(f"""## <h5 style='text-align: center; color: #3b3b3b; font-size:250%, font-weight = 600'>{min_ttl1}</h5>""", 
+                st.markdown(f"""## <h5 style='text-align: center; font-size:250%, font-weight = 600'>{min_ttl1}</h5>""", 
                         unsafe_allow_html=True)
                 
                 with st.spinner('Loading for Scene Graph...⌛️'):
@@ -173,7 +171,7 @@ def Practice1():
         with col_3:
 
             min_ttl2 = f"Result 2 : <i>Scene Graph</i> of selected Image"
-            st.markdown(f"""## <h5 style='text-align: center; color: #3b3b3b; font-size:250%, font-weight = 100'>{min_ttl2}</h5>""", 
+            st.markdown(f"""## <h5 style='text-align: center; font-size:250%, font-weight = 100'>{min_ttl2}</h5>""", 
                         unsafe_allow_html=True)
 
             if clicked is not None:
@@ -244,7 +242,7 @@ def Practice2():
         img_number = len(img_dic.keys())
         with col02:
             img_number_txt1 = f"<strong><i>{img_number}</i></strong> - Image is detected ❗"
-            st.markdown(f"""<span style='text-align: left; color: #3b3b3b; font-size:120%'>{img_number_txt1}</span>""", unsafe_allow_html=True)
+            st.markdown(f"""<span style='text-align: left; font-size:120%'>{img_number_txt1}</span>""", unsafe_allow_html=True)
         st.markdown("___")
                     
         if img_number > 0:
@@ -267,7 +265,7 @@ def Practice2():
                     st.session_state.counter = 0
 
                 with col03:
-                    img_number_txt2 = f"<strong style='color: Black; font-size:150%'><i>{st.session_state.counter + 1}</i></strong>(th) out of {img_number}"
+                    img_number_txt2 = f"<strong style=' font-size:150%'><i>{st.session_state.counter + 1}</i></strong>(th) out of {img_number}"
                     st.markdown(f"""###### {img_number_txt2}""", unsafe_allow_html=True)
 
                 with col1:
