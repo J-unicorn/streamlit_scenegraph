@@ -155,8 +155,7 @@ def Practice():
         if image_file:
             st.markdown("#### SceneGraph 생성을 해보세요.")
             pred_button = st.button("Scene Graph Detection")
-            open_image = Image.open(image_file, mode='r')
-            st.image(open_image, caption='Upload Image')
+            st.image(Image.open(image_file), caption='Upload Image')
             df = image_extraction(image_file)
            
             
