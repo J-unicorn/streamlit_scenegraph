@@ -9,6 +9,8 @@ import numpy as np
 import json
 import io
 from streamlit_option_menu import option_menu
+sys.path.append('/app/streamlit_scenegraph/pages/')
+from utils.vis import graph_visual
 
 st.set_page_config(layout="wide")
 
@@ -179,7 +181,7 @@ def Practice():
         if st.session_state.predbtn_state: 
             with st.spinner('Wait for it...'):
                 st.markdown("#### SceneGraph를 시각화 합니다.")
-                image_model.graph_vis(df,'SUBJECT','OBJECT','PREDICATE')
+                graph_visual(df,'SUBJECT','OBJECT','PREDICATE')
 
 
 def main() :
