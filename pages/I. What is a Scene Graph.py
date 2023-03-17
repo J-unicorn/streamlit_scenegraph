@@ -19,7 +19,7 @@ sys.path.append('/app/streamlit_scenegraph/pages/')
 from utils.vis import graph_visual
 
 st.set_page_config(layout="wide")
-st.sidebar.markdown('![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=https://share.streamlit.io/your_deployed_app_link&label=VisitorsCount&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge)')
+st.sidebar.markdown('![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=https://j-unicorn-streamlit-scenegraph-scene-graph-tutorial-bhe91g.streamlit.app/&label=VisitorsCount&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge)')
 
 st.markdown("""
 <style>
