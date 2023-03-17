@@ -28,7 +28,6 @@ st.markdown("""
     font-size:250% !important;
 }
 """, unsafe_allow_html=True)
-st.sidebar.markdown('![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=https://j-unicorn-streamlit-scenegraph-scene-graph-tutorial-bhe91g.streamlit.app/&label=VisitorsCount&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge)')
 
 def Intro():
     st.markdown('<h1 class ="center"> Scene Graph를 이용한 장면(Scene) 간 유사도 </h1>', unsafe_allow_html=True)
