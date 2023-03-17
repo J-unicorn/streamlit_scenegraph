@@ -13,6 +13,7 @@ sys.path.append('/app/streamlit_scenegraph/pages/')
 from utils.vis import graph_visual
 
 st.set_page_config(layout="wide")
+st.sidebar.markdown('![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=https://share.streamlit.io/your_deployed_app_link&label=VisitorsCount&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge)')
 
 def load_image(img_path):
     img = Image.open(img_path)
