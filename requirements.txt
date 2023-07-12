@@ -1,10 +1,8 @@
 colourmap
 imageio
 imageio-ffmpeg
-imbalanced-learn
-imblearN
 networkx
-opencv-python-headless==4.5.5.64
+opencv-python-headless
 pandas
 streamlit
 streamlit-agraph
