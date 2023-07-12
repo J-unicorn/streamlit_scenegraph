@@ -1,8 +1,4 @@
-colourmap
-imageio
-imageio-ffmpeg
-opencv-python-headless
-pandas
+Pillow
 streamlit
 streamlit-agraph
 streamlit-option-menu
