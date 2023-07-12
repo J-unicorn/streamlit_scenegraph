@@ -3,3 +3,4 @@ streamlit
 streamlit-agraph
 streamlit-option-menu
 st-click-detector
+altair==4.0
