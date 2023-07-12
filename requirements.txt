@@ -1,7 +1,6 @@
 colourmap
 imageio
 imageio-ffmpeg
-networkx
 opencv-python-headless
 pandas
 streamlit
